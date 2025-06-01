@@ -8,12 +8,18 @@ let number = document.querySelector(".number");
 themeContainer.addEventListener("click", () => {
   if (couterBall == 1) {
     ball.style.left = `29px`;
+    document.documentElement.style.setProperty('--container-color', '#e6e6e6');
+    document.documentElement.style.setProperty('--text-color', '#35352C');
     couterBall++;
   } else if (couterBall == 2) {
     ball.style.left = `59px`;
+    document.documentElement.style.setProperty('--container-color', '#17062a');
+    document.documentElement.style.setProperty('--text-color', '#ffe53d');
     couterBall++;
   } else if (couterBall == 3) {
     ball.style.left = `1px`;
+    document.documentElement.style.setProperty('--container-color', '#3b4664');
+    document.documentElement.style.setProperty('--text-color', '#eae3db');
     couterBall = 1;
   }
 });
