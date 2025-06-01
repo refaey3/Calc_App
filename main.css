@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --container-color: #3b4664;
+  --theme-but-color: #252c44;
+  --text-color: #eae3db;
+  --text-area-color: #181f32;
+  --but-text-color: #4d525d;
+  --reset-but-color: #a2b3e1;
+  --reset-but-shadow-color: #414e70;
+  --equal-but-color: #f96c5b;
+  --equal-but-shadow-color: #8f2316;
+  --numbers-but-color: #eee;
+  --numbers-shadow-color: #b0a296;
+}
+body {
+  background-color: var(--container-color);
+  height: 100vh;
+}
+.app {
+  margin: 50px auto;
+  padding: 30px;
+  width: 500px;
+  height: 600px;
+  font-weight: bold;
+}
+
+.app .theme {
+  background-color: transparent;
+  color: var(--text-area-color);
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  color: var(--text-color);
+}
+.app .theme h3 {
+  font-weight: bold;
+}
+.app .theme .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.app .theme .left h4 {
+  font-size: 12px;
+}
+.app .theme .left .theme-cont {
+  width: 78px;
+  height: 18px;
+  border-radius: 50px;
+  background-color: var(--text-area-color);
+  position: relative;
+  cursor: pointer;
+}
+.app .theme .left .theme-cont .ball {
+  width: 18px;
+  position: absolute;
+  height: 97%;
+  border-radius: 50%;
+  background-color: var(--equal-but-color);
+  left: 1px;
+  transition: 0.3s;
+}
+.output {
+  width: 96%;
+  height: 74px;
+  background-color: var(--text-area-color);
+  margin: 20px -7px;
+  border-radius: 9px;
+  display: flex;
+  position: relative;
+}
+
+.buttoms-container {
+  width: 93%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--text-area-color);
+  border-radius: 12px;
+  text-align: center;
+}
+.buttoms-container button {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  width: 75px;
+  box-shadow: 0px 3px var(--numbers-shadow-color);
+  cursor: pointer;
+  background-color: var(--numbers-but-color);
+  color: var(--but-text-color);
+}
+.buttoms-container button.del {
+  background-color: var(--reset-but-color);
+  color: var(--text-color);
+  box-shadow: 0px 3px var(--reset-but-shadow-color);
+}
+.buttoms-container > div {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 26px;
+  margin-left: 4px;
+}
+.buttoms-container .last {
+  gap: 23px;
+  justify-content: space-around;
+  color: white;
+}
+.buttoms-container .last button {
+  width: 49%;
+  color: var();
+}
+.buttoms-container .last .rest {
+  background-color: var(--reset-but-color);
+  color: var(--text-color);
+  box-shadow: 0px 3px var(--reset-but-shadow-color);
+}
+.buttoms-container .last .equal {
+  background-color: var(--equal-but-color);
+  color: var(--text-color);
+  box-shadow: 0px 2px var(--equal-but-shadow-color);
+}
+.number {
+  color: var(--numbers-but-color);
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: normal;
+  margin-left: 4px;
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*’Media Query*/
+@media (max-width: 515px) {
+  .app {
+    width: 100%;
+  }
+  .app .theme {
+    width: 95%;
+  }
+  .app .theme .left .theme-cont {
+    width: 65px;
+  }
+  .app .theme .left .theme-cont .ball {
+    width: 17px;
+    height: 100%;
+    left: 0;
+  }
+  .output {
+    width: 102%;
+  }
+  .buttoms-container {
+    width: 103%;
+    height: 40vh;
+    margin-top: 40px;
+    margin-left: -6px;
+  }
+  .buttoms-container > div {
+    margin-top: 14px;
+  }
+
+  .buttoms-container .last {
+    margin-top: 22px;
+  }
+}
